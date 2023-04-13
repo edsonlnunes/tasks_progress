@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+import 'package:progress_bar_todo_list_page/pages/home_page/store/home_store.dart';
 
-import 'app/pages/home_page/home_page.dart';
+import 'pages/home_page/home.page.dart';
 
 void main() {
+  GetIt.I.registerSingleton<HomeStore>(HomeStore());
   runApp(const MyApp());
 }
 
